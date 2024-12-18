@@ -1,10 +1,10 @@
-#### nfl_data_py
+# nfl_data_py
 
 nfl_data_py is a Python library for interacting with NFL data sourced from [nflfastR](https://github.com/nflverse/nflfastR-data/), [nfldata](https://github.com/nflverse/nfldata/), [dynastyprocess](https://raw.githubusercontent.com/dynastyprocess/), and [Draft Scout](https://draftscout.com/).
 
 Includes import functions for play-by-play data, weekly data, seasonal data, rosters, win totals, scoring lines, officials, draft picks, draft pick values, schedules, team descriptive info, combine results and id mappings across various sites.
 
-### Installation
+## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install nfl_data_py.
 
@@ -18,7 +18,7 @@ pip install nfl_data_py
 import nfl_data_py as nfl
 ```
 
-**Working with play-by-play data**
+## Working with play-by-play data
 
 ```python
 nfl.import_pbp_data(years, columns, downcast=True, cache=False, alt_path=None)
@@ -47,7 +47,7 @@ nfl.see_pbp_cols()
 
 returns list of columns available in play-by-play dataset
 
-**Working with weekly data**
+## Working with weekly data
 
 ```python
 nfl.import_weekly_data(years, columns, downcast)
@@ -70,7 +70,7 @@ nfl.see_weekly_cols()
 
 returns list of columns available in weekly dataset
 
-**Working with seasonal data**
+## Working with seasonal data
 
 ```python
 nfl.import_seasonal_data(years, s_type)
@@ -101,7 +101,7 @@ calculated receiving market share stats include:
 | yptmpa   | receiving yards per team pass attempt                                                                                                         |
 | ppr_sh   | PPR fantasy points share                                                                                                                      |
 
-**Additional data imports**
+## Additional data imports
 
 ```python
 nfl.import_seasonal_rosters(years, columns)
@@ -286,12 +286,12 @@ Returns dataframe with snap count records
 years
 : optional, list of years to return data for
 
-
 ```python
 nfl.import_ftn_data(years, columns=None, downcast=True, thread_requests=False)
 ```
+
 Returns dataframe with FTN charting data
-    
+
 FTN Data manually charts plays and has graciously provided a subset of their
 charting data to be published via the nflverse. Data is available from the 2022
 season onwards and is charted within 48 hours following each game. This data
@@ -307,9 +307,7 @@ downcast (bool)
 thread_requests (bool)
     : optional use thread pool to read files, default False
 
-
-
-**Additional features**
+## Additional features
 
 ```python
 nfl.cache_pbp(years, downcast=True, alt_path=None)
